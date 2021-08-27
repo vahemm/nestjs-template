@@ -1,16 +1,13 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class User extends BaseEntity {
+export class Position extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  name: string;
+  playerPosition: string;
 
   @Column({ unique: true })
-  email: string;
-
-  @Column({ nullable: true })
-  birthDay: Date;
+  numberPosition: number;
 }
